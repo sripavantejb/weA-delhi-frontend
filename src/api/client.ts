@@ -1,7 +1,7 @@
 // In dev, use same origin so Vite proxy can forward /api to the backend; otherwise use env or default
 const API_BASE =
   (import.meta.env.VITE_API_URL && String(import.meta.env.VITE_API_URL).trim()) ||
-  (import.meta.env.DEV ? '' : 'http://localhost:3000');
+  (import.meta.env.DEV ? '' : 'https://we-a-delhi-backend.vercel.app');
 
 function getToken(): string | null {
   return localStorage.getItem('token');
